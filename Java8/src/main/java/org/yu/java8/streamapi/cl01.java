@@ -1,7 +1,9 @@
 package org.yu.java8.streamapi;
 
+import org.openjdk.jol.info.ClassLayout;
 import org.yu.java8.lambda.methodref.EmployeeData;
 import org.yu.java8.lambda.methodref.bean.Employee;
+import org.yu.java8.optional.opcl01;
 
 import java.util.*;
 import java.util.function.BinaryOperator;
@@ -130,6 +132,15 @@ public class cl01 {
         List<Employee> collect = employees.stream().collect(Collectors.toList());
         collect.forEach(System.out::println);
 
+    }
+
+    public static void main(String[] args) {
+        opcl01 o = new opcl01();
+        System.out.println(o.hashCode());
+        System.out.println(ClassLayout.parseInstance(o).toPrintable());
+        synchronized (o){
+            System.out.println(ClassLayout.parseInstance(o).toPrintable());
+        }
     }
 
 }

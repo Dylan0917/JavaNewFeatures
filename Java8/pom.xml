@@ -22,6 +22,7 @@
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
+<!--    java对象头打印工具-->
   </dependencies>
 
   <profiles>
